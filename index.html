@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/fb4a8c3cc1.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Aditya </span> <br></h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------about----------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About <span>Me</span></h1>
+                    <p>Hey there! I'm <span class="adi">Aditya</span>, a third-year student at Chandigarh University, deeply passionate about video editing, web designing, and web development. Through hands-on experience and dedication, I've crafted projects like Amazon and Myntra clones, along with my portfolio website, showcasing my skills and creativity. Beyond technical proficiency, I thrive on storytelling through digital mediums, aiming to create engaging and memorable experiences. Chandigarh University has provided me with a platform to explore my passions, and I'm eager to push the boundaries of creativity and technology. Outside academics, I enjoy staying updated with industry trends and collaborating with fellow enthusiasts. Let's connect and create something extraordinary together!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links " onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UX/UI</span><br>Designer Web/App interfaces </li>
+                            <li><span>web-development</span><br>Web App-development </li>
+                            <li><span>Video editing</span><br>3d animatiom and  Video Editing </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <p>During a three-month role at an Ayurveda company in Ludhiana, I served as a video editor, crafting engaging content to promote Ayurvedic products. This experience, alongside 1.5 years in video editing and web development, honed my skills in creating compelling visuals and functional websites. From short films to e-commerce clones like Amazon and Myntra, I've embraced diverse projects, fostering adaptability and attention to detail. I'm passionate about leveraging these skills to contribute meaningfully to innovative projects and further explore the realms of digital creativity.</p>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>10th</span><br> <p> (83.4%)</p>govt.sec.sen.school jalari </li>
+                            <li><span>12th</span><br> <p> (64.8%)</p>govt.sec.sen.school jalari </li>
+                            <li><span>UG</span><br><p> (7.43cgpa)</p >Chandigarh University </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------- Services --------------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services </h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>In the realm of web design, I specialize in crafting visually stunning and user-friendly interfaces. From conceptualization to implementation, I leverage creativity and technical expertise to deliver websites that seamlessly blend aesthetics with functionality, ensuring an exceptional user experience.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX design</h2>
+                    <p>As a UI/UX designer, I specialize in creating intuitive and visually appealing digital experiences. With a focus on user-centric design principles, I craft interfaces that not only look stunning but also prioritize usability and accessibility. From wireframing to prototyping, I'm dedicated to delivering engaging and seamless user experiences across platforms.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h2>Video editing</h2>
+                    <p>In the realm of video editing, I bring stories to life through meticulous editing and creative storytelling. With a keen eye for detail and a passion for visual communication, I craft captivating videos that resonate with audiences. From cutting-edge effects to seamless transitions, I strive to deliver polished content that leaves a lasting impression.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="loading">
+                    <div class="layer">
+                        <h3>Amazon clone</h3>
+                        <p>Emulating the user-friendly interface and robust functionality of Amazon, our clone offers seamless navigation, secure transactions, and a wide array of products. With intuitive search features and personalized recommendations, users can enjoy a familiar shopping experience while benefiting from our platform's unique enhancements</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work-2.png" alt="loading">
+                    <div class="layer">
+                        <h3>Music website</h3>
+                        <p>Delve into a melodic journey with our music website, meticulously crafted to resonate with music enthusiasts worldwide. From curated playlists to personalized recommendations, immerse yourself in a harmonious digital experience that celebrates the diversity of sounds and artists. Whether discovering new tunes or rediscovering classics, our platform offers an intuitive interface designed to amplify your musical exploration</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work-3.png" alt="loading">
+                    <div class="layer">
+                        <h3>portfolio website</h3>
+                        <p>Elevate your online presence with our meticulously designed portfolio website. Seamlessly blending creativity and functionality, our platform showcases your talents and achievements in a visually captivating manner. With intuitive navigation and responsive design, your portfolio comes to life, leaving a lasting impression on visitors and potential clients alike.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ------------------contact---------------------------- -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="contact-left">
+                    <h1 class="subtitle"> Contact me </h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> Adityasharmakallar@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i>+91-6230607027</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/aditya-8a77b2225/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/adityasharma_0608/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Adityasharma1108" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <a href="images/resume final.pdf" download class="btn btn2">Download CV</a>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="your name" required>
+                        <input type="email" name="email" placeholder="your email" required>
+                        <textarea name="messages" rows="6" placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright  <i class="fa-regular fa-copyright"></i> Aditya.portfolio website <i>(2024)</i></p>
+        </div>
+    </div>
+<!-- --------------------------------script---------------------------- -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxS9gwWmQqxqKA6Ai1eyaTFx8Q5oVuygvtYDoHwwoq9j7P__ZM4MUBwKzitS58DcWJMZw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+    </script>
+</body>
+
+</html>
