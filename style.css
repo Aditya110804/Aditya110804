@@ -306,10 +306,10 @@ transform: scale(1.1);
     background-color:#238df0;
     
 }
-
-/* ----------------------certification---------------------- */
+/*------------certification--------------------------*/
 #certification {
     padding-bottom:50px ;
+
 }
 
 .certification-list {
@@ -357,6 +357,7 @@ transform: scale(1.1);
     background-color: #238df0;
     transform: translateY(-5px);
 }
+
 
 /* ----------------------contact---------------------------- */
 
