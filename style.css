@@ -403,9 +403,12 @@ nav .fa-solid{
     #header{
         background-image: url(images/phone-background.png);
     }
-
+   .logo{
+       margin-top: 12px;
+       width: 50%;
+   }
     .header-text{
-        margin-top:40%;
+        margin-top:50%;
         font-size: 25px;
     }
     .header-text h1{
