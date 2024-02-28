@@ -170,7 +170,7 @@ font-size: 30px;
 display: block;
 }
 
-/* services */
+/* ---------------------------------services -------------------------*/
 
 #services{
     padding: 30px 0;
@@ -306,6 +306,60 @@ transform: scale(1.1);
     background-color:#238df0;
     
 }
+
+/* ----------------------certification---------------------- */
+
+#certification {
+    padding-bottom:50px ;
+
+}
+
+.certification-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.certification-list div {
+    background-color: rgb(43, 43, 44);
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 270;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.certification-list div h2 {
+    font-weight: 500px;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #238df0;
+}
+
+.certification-list div p {
+    color: #d3d3d3;
+}
+
+.certification-list div a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    margin-right: 20px;
+    
+    }
+
+.certification-list div:hover h2 {
+    color: white;
+}
+
+.certification-list div:hover {
+    background-color: #238df0;
+    transform: translateY(-5px);
+}
+
 /* ----------------------contact---------------------------- */
 
 .contact-left{
