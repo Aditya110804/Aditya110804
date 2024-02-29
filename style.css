@@ -456,13 +456,15 @@ nav .fa-solid{
     #header{
         background-image: url(images/phone-background.png);
     }
-   .logo{
-       margin-top: 12px;
-       width: 50%;
-   }
+    .logo{
+        margin-top: 12px;
+        width: 50%;
+
+    }
     .header-text{
-        margin-top:50%;
+        margin-top: 50px;
         font-size: 25px;
+
     }
     .header-text h1{
         font-size: 40px;
@@ -470,23 +472,32 @@ nav .fa-solid{
     nav .fa-solid{
         display:block;
         font-size: 25px;
+        color:#238df0;
     }
     nav ul {
-        background-color:#238df0;
+        background-color:#393a3b;
         position: fixed;
         top: 0;
         right:-200px;
-        width: 200px;
+        width: 120px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
     }
-
+    
     nav ul li{
         display: block;
-        margin: 25px
+        margin: 25px;
     }
 
+    nav ul li:hover{
+        transform: translateY(-3px);
+    }
+
+    #sidemenu a{
+        font-size: bolder;
+        font-family: 'Times New Roman', Times, serif;
+    }
     nav ul .fa-solid {
         position: absolute;
         top: 25px;
