@@ -209,22 +209,30 @@
         </div>
     </div>
 <!-- --------------------------------script---------------------------- -->
- <script>
+<script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxS9gwWmQqxqKA6Ai1eyaTFx8Q5oVuygvtYDoHwwoq9j7P__ZM4MUBwKzitS58DcWJMZw/exec';
   const form = document.forms['submit-to-google-sheet'];
   const msg = document.getElementById("msg");
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
       .then(response => {
-        msg.innerHTML = "Message sent successfully";
-        setTimeout(() => { msg.innerHTML = "" }, 5000);
+        msg.innerHTML = "✔ Message sent successfully!";
+        msg.className = "success-msg";
+        setTimeout(() => {
+          msg.innerHTML = "";
+          msg.className = "";
+        }, 5000);
         form.reset();
       })
       .catch(error => {
-        msg.innerHTML = "Something went wrong!";
-        console.error('Error!', error.message);
+        msg.innerHTML = "❌ Something went wrong!";
+        msg.className = "error-msg";
+        setTimeout(() => {
+          msg.innerHTML = "";
+          msg.className = "";
+        }, 5000);
       });
   });
 </script>
