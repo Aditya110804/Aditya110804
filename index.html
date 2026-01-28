@@ -4,80 +4,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Aditya Sharma - Portfolio</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fb4a8c3cc1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-text">Loading...</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <div id="header">
+        <div class="floating-symbols">
+            <div class="symbol"><i class="fab fa-github"></i></div>
+            <div class="symbol"><i class="fab fa-js-square"></i></div>
+            <div class="symbol"><i class="fab fa-css3-alt"></i></div>
+            <div class="symbol"><i class="fab fa-html5"></i></div>
+            <div class="symbol"><i class="fab fa-python"></i></div>
+            <div class="symbol"><i class="fab fa-react"></i></div>
+            <div class="symbol"><i class="fab fa-node-js"></i></div>
+            <div class="symbol"><i class="fas fa-code"></i></div>
+            <div class="symbol"><i class="fas fa-database"></i></div>
+            <div class="symbol"><i class="fab fa-git-alt"></i></div>
+            <div class="symbol"><i class="fas fa-terminal"></i></div>
+            <div class="symbol"><i class="fab fa-npm"></i></div>
+            <div class="symbol"><i class="fas fa-server"></i></div>
+            <div class="symbol"><i class="fab fa-docker"></i></div>
+            <div class="symbol"><i class="fas fa-laptop-code"></i></div>
+            <div class="symbol"><i class="fab fa-bootstrap"></i></div>
+            <div class="symbol"><i class="fas fa-code-branch"></i></div>
+            <div class="symbol"><i class="fab fa-figma"></i></div>
+            <div class="symbol"><i class="fas fa-bug"></i></div>
+            <div class="symbol"><i class="fas fa-cogs"></i></div>
+        </div>
         <div class="container">
+
             <nav>
-                <img src="images/logo.png" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">portfolio</a></li>
-                    <li><a href="#certification">Certification</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#header" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#certification" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
-                <p>Web Developer</p>
-                <h1>Hi, I'm <span>Aditya </span> <br></h1>
+            <div class="header-text" data-aos="fade-up" data-aos-duration="1000">
+                <p class="greeting">Hello, I'm</p>
+                <h1 class="typing-text">Aditya Sharma</h1>
+                <p class="role">Full Stack Developer & UI/UX Designer</p>
+                <div class="header-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
             </div>
         </div>
     </div>
-    <!-- -----------------------about----------------------- -->
+
+    <!-- Skills Section -->
+    <div id="skills">
+        <div class="container">
+            <h1 class="subtitle" data-aos="fade-up">Technical <span>Skills</span></h1>
+            <div class="skills-logos">
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-html5"></i>
+                    <span class="skill-name">HTML5</span>
+                </div>
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="150">
+                    <i class="fab fa-css3-alt"></i>
+                    <span class="skill-name">CSS3</span>
+                </div>
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fab fa-js-square"></i>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="250">
+                    <i class="fab fa-python"></i>
+                    <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fab fa-react"></i>
+                    <span class="skill-name">React</span>
+                </div>
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="350">
+                    <i class="fab fa-node-js"></i>
+                    <span class="skill-name">Node.js</span>
+                </div>
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-database"></i>
+                    <span class="skill-name">MySQL</span>
+                </div>
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="450">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="skill-name">Streamlit</span>
+                </div>
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-table"></i>
+                    <span class="skill-name">NumPy</span>
+                </div>
+                <div class="skill-logo" data-aos="fade-up" data-aos-delay="550">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="skill-name">Pandas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number" data-count="15">7</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number" data-count="3">16</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number" data-count="2">1</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-number" data-count="100">100</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.jpg">
+                <div class="about-col-1" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="images/user.jpg" alt="Profile">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Aditya Sharma</h3>
+                                <p>Full Stack Developer</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About <span>Me</span></h1>
-                    <p>Hey there! I'm <span class="adi">Aditya</span>,a Computer Science Engineering graduate from Chandigarh University, currently working as a Python Developer Intern at Yash Technologies. I'm gaining hands-on experience in real-world backend development, automation, and software engineering in a corporate environment.
-                       My core strengths lie in web development, UI/UX design, and video editing. I've built and contributed to multiple practical projects, including Amazon and Myntra clones, a personal portfolio website, an AI-based resume screening system, and a transport optimization platform. Each project reflects my commitment to blending logic with creativity to solve real-world problems.
-                       I'm passionate about learning emerging technologies and building digital experiences that are both functional and impactful. I’m always open to collaboration, feedback, and new challenges that push me to grow as a developer and creator.
+                    <p>Hey there! I'm <span class="adi">Aditya</span>, Hey there! I'm Aditya, a Computer Science Engineering graduate from Chandigarh University, currently working as a Frontend Developer Intern at Yash Technologies. I'm gaining hands-on experience in real-world web development, UI/UX implementation, and building responsive digital interfaces in a corporate environment. My core strengths lie in web development, UI/UX design, and video editing. I've built and contributed to multiple practical projects, including Amazon and Myntra clones, a personal portfolio website, an AI RAG-based hybrid chatbot, and a transport optimization platform. Each project reflects my commitment to blending logic with creativity to craft functional, user-centric digital experiences. I'm passionate about learning emerging technologies and building impactful frontend solutions that prioritize seamless design and performance. I'm always open to collaboration, feedback, and new challenges that push me to grow as a developer and creator.
                     </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('skills-tab')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links " onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
 
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>UX/UI</span><br>Designer Web/App interfaces </li>
-                            <li><span>web-development</span><br>Web App-development </li>
-                            <li><span>Video editing</span><br>3d animatiom and  Video Editing </li>
-                        </ul>
+                    <div class="tab-contents" id="skills-tab">
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4><i class="fas fa-code"></i> Frontend</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">CSS3</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Bootstrap</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4><i class="fas fa-server"></i> Backend</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Express</span>
+                                    <span class="skill-tag">Flask</span>
+                                    <span class="skill-tag">MySQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4><i class="fas fa-tools"></i> Tools & Others</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">VS Code</span>
+                                    <span class="skill-tag">Figma</span>
+                                    <span class="skill-tag">Photoshop</span>
+                                    <span class="skill-tag">Video Editing</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="tab-contents" id="experience">
-                        <p>Yash Techology , python developer - Intern (june-2025)
-                           Currently working as a Python Developer Intern at Yash
-                           Technologies , where I’m gaining hands-on experience in backend
-                           development and real-world corporate projects. This role is helping
-                           me strengthen my skills in Python, teamwork, and agile
-                           methodologies.</p>
+                        <div class="experience-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header">
+                                        <h3>Python Developer Intern</h3>
+                                        <span class="experience-date">June 2024 - Present</span>
+                                    </div>
+                                    <h4><i class="fas fa-building"></i> Yash Technologies</h4>
+                                    <ul class="experience-details">
+                                        <li>Developing backend applications using Python and Flask</li>
+                                        <li>Working on automation scripts and data processing</li>
+                                        <li>Collaborating with cross-functional teams in agile environment</li>
+                                        <li>Learning enterprise-level software development practices</li>
+                                    </ul>
+                                    <div class="tech-used">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">Flask</span>
+                                        <span class="tech-badge">SQL</span>
+                                        <span class="tech-badge">Git</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="experience-header">
+                                        <h3>Freelance Web Developer</h3>
+                                        <span class="experience-date">Jan 2023 - May 2024</span>
+                                    </div>
+                                    <h4><i class="fas fa-laptop-code"></i> Self-Employed</h4>
+                                    <ul class="experience-details">
+                                        <li>Built responsive websites for local businesses</li>
+                                        <li>Created e-commerce platforms and portfolio sites</li>
+                                        <li>Provided UI/UX design and consultation services</li>
+                                        <li>Managed client relationships and project timelines</li>
+                                    </ul>
+                                    <div class="tech-used">
+                                        <span class="tech-badge">HTML/CSS</span>
+                                        <span class="tech-badge">JavaScript</span>
+                                        <span class="tech-badge">React</span>
+                                        <span class="tech-badge">Figma</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>10th</span><br> <p> (83.4%)</p>govt.sec.sen.school jalari </li>
-                            <li><span>12th</span><br> <p> (64.8%)</p>govt.sec.sen.school jalari </li>
-                            <li><span>UG</span><br><p> (7.20cgpa)</p >Chandigarh University </li>
-                        </ul>
+                        <div class="education-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="education-header">
+                                        <h3><i class="fas fa-graduation-cap"></i> Bachelor of Technology</h3>
+                                        <span class="education-year">2020 - 2024</span>
+                                    </div>
+                                    <h4>Computer Science Engineering</h4>
+                                    <p class="institution">Chandigarh University, Punjab</p>
+                                    <div class="grade-info">
+                                        <span class="grade">CGPA: 7.20</span>
+                                        <span class="status">Graduated</span>
+                                    </div>
+                                    <div class="achievements">
+                                        <h5>Key Achievements:</h5>
+                                        <ul>
+                                            <li>Completed multiple web development projects</li>
+                                            <li>Participated in coding competitions and hackathons</li>
+                                            <li>Led team projects in software engineering</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="education-header">
+                                        <h3><i class="fas fa-school"></i> Senior Secondary (12th)</h3>
+                                        <span class="education-year">2019 - 2020</span>
+                                    </div>
+                                    <h4>Science Stream (PCM)</h4>
+                                    <p class="institution">Govt. Senior Secondary School, Jalari</p>
+                                    <div class="grade-info">
+                                        <span class="grade">64.8%</span>
+                                        <span class="status">Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="education-header">
+                                        <h3><i class="fas fa-school"></i> Secondary (10th)</h3>
+                                        <span class="education-year">2017 - 2018</span>
+                                    </div>
+                                    <h4>All Subjects</h4>
+                                    <p class="institution">Govt. Senior Secondary School, Jalari</p>
+                                    <div class="grade-info">
+                                        <span class="grade">83.4%</span>
+                                        <span class="status">Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -85,9 +332,7 @@
         </div>
     </div>
 
-
-    <!-------------------- Services --------------------->
-
+    <!-- Services Section -->
     <div id="services">
         <div class="container">
             <h1 class="subtitle">My Services </h1>
@@ -114,44 +359,125 @@
         </div>
     </div>
 
+    <!-- Portfolio Section -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="subtitle">My Work</h1>
+            <h1 class="subtitle" data-aos="fade-up">My <span>Work</span></h1>
+            <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
             <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.png" alt="loading">
+                <div class="work" data-category="web" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="images/amazon.png" alt="E-commerce Project">
                     <div class="layer">
-                        <h3>Amazon clone</h3>
-                        <p>Emulating the user-friendly interface and robust functionality of Amazon, our clone offers seamless navigation, secure transactions, and a wide array of products. With intuitive search features and personalized recommendations, users can enjoy a familiar shopping experience while benefiting from our platform's unique enhancements</p>
-                        <a href="https://github.com/Aditya110804/amazon-clone" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <h3>Amazon Clone</h3>
+                        <p>Full-featured e-commerce platform with modern UI, secure transactions, and personalized recommendations. Built with HTML, CSS, and JavaScript.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Aditya110804/amazon-clone" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="work">
-                    <img src="images/work-2.png" alt="loading">
+                <div class="work" data-category="web" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/work-2.png" alt="Music Platform">
                     <div class="layer">
-                        <h3>Music website</h3>
-                        <p>Delve into a melodic journey with our music website, meticulously crafted to resonate with music enthusiasts worldwide. From curated playlists to personalized recommendations, immerse yourself in a harmonious digital experience that celebrates the diversity of sounds and artists. Whether discovering new tunes or rediscovering classics, our platform offers an intuitive interface designed to amplify your musical exploration</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <h3>Music Streaming Platform</h3>
+                        <p>Interactive music platform with curated playlists, personalized recommendations, and seamless audio streaming experience.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="work">
-                    <img src="images/work-3.png" alt="loading">
+                <div class="work" data-category="design" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="images/portfolio.png" alt="Portfolio Website">
                     <div class="layer">
-                        <h3>portfolio website</h3>
-                        <p>Elevate your online presence with our meticulously designed portfolio website. Seamlessly blending creativity and functionality, our platform showcases your talents and achievements in a visually captivating manner. With intuitive navigation and responsive design, your portfolio comes to life, leaving a lasting impression on visitors and potential clients alike.</p>
-                        <a href="https://github.com/Aditya110804/Aditya110804" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <h3>Portfolio Website</h3>
+                        <p>Modern, responsive portfolio showcasing projects and skills with smooth animations and professional design.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Aditya110804/Aditya110804" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="https://aditya8471.site" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work" data-category="web" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="images/chatbot.png" alt="AI Resume Screener">
+                    <div class="layer">
+                        <h3>Dost - AI RAG Chatbot</h3>
+                        <p>Advanced AI-powered chatbot using Retrieval-Augmented Generation (RAG) technology for intelligent conversations and document-based question answering with agent capabilities.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">LangChain</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work" data-category="mobile" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="images/carpooling.jpg" alt="Transport App">
+                    <div class="layer">
+                        <h3>Transport Optimization Platform</h3>
+                        <p>Smart transportation management system with route optimization and real-time tracking capabilities.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">GPS API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work" data-category="web" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="images/mintra.jpg" alt="Myntra Clone">
+                    <div class="layer">
+                        <h3>Myntra Fashion Clone</h3>
+                        <p>Fashion e-commerce platform with advanced filtering, wishlist functionality, and seamless checkout process.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Express</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <a href="#" class="btn">See more</a>
+            <a href="#" class="btn btn-primary">View All Projects</a>
         </div>
     </div>
 
-    
-    <!-- ----------------certification------------------------->
+    <!-- Certifications Section -->
     <div id="certification">
         <div class="container">
             <h1 class="subtitle">Certifications & Badges</h1>
@@ -175,8 +501,7 @@
         </div>
     </div>
 
-    <!-- ------------------contact---------------------------- -->
-
+    <!-- Contact Section -->
     <div id="contact">
         <div class="container">
             <div class="row">
@@ -203,7 +528,6 @@
                 </form>
                 <span id="msg"></span>
 
-
                 </div>
             </div>
         </div>
@@ -211,8 +535,59 @@
             <p>Copyright  <i class="fa-regular fa-copyright"></i> Aditya.portfolio website <i>(2024)</i></p>
         </div>
     </div>
-<!-- --------------------------------script---------------------------- -->
+
+<!-- Script Section -->
+<script src="main.js"></script>
 <script>
+  // Typing Animation
+  document.addEventListener('DOMContentLoaded', function() {
+    const typingElement = document.querySelector('.typing-text');
+    const text = 'Aditya Sharma';
+    let index = 0;
+    
+    typingElement.textContent = '';
+    
+    function typeWriter() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 80);
+      }
+    }
+    
+    setTimeout(typeWriter, 1000);
+  });
+
+  // Portfolio Filter
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const workItems = document.querySelectorAll('.work');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        const filterValue = btn.getAttribute('data-filter');
+        
+        workItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxS9gwWmQqxqKA6Ai1eyaTFx8Q5oVuygvtYDoHwwoq9j7P__ZM4MUBwKzitS58DcWJMZw/exec';
   const form = document.forms['submit-to-google-sheet'];
   const msg = document.getElementById("msg");
