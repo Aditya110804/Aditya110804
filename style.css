@@ -1553,16 +1553,6 @@ nav .fa-solid {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
-    nav {
-        justify-content: space-between;
-    }
-    
-    .hamburger {
-        display: flex;
-        margin-left: auto;
-    }
-
 /* Responsive Design */
 @media only screen and (max-width: 1024px) {
     /* iPad and smaller tablets */
@@ -1592,6 +1582,15 @@ nav .fa-solid {
 }
 
 @media only screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+    
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
     .container {
         padding: 0 3%;
     }
