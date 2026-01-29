@@ -1554,22 +1554,69 @@ nav .fa-solid {
 }
 
 /* Responsive Design */
-@media only screen and (max-width: 1024px) {
-    /* iPad and smaller tablets */
+/* Large Desktop */
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 2%;
+    }
+    
+    .typing-text {
+        font-size: 5rem;
+    }
+    
+    .skills-logos {
+        gap: 4rem;
+    }
+    
+    .skill-logo i {
+        font-size: 5rem;
+    }
+}
+
+/* Desktop */
+@media only screen and (max-width: 1439px) and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 3%;
+    }
+    
+    .typing-text {
+        font-size: 4.5rem;
+    }
+}
+
+/* Laptop */
+@media only screen and (max-width: 1199px) and (min-width: 1025px) {
     .container {
         padding: 0 4%;
     }
     
     .typing-text {
-        font-size: 3rem;
+        font-size: 4rem;
+    }
+    
+    .work-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* iPad Pro and Large Tablets */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .container {
+        padding: 0 4%;
+    }
+    
+    .typing-text {
+        font-size: 3.5rem;
     }
     
     .skills-logos {
-        gap: 2rem;
+        gap: 2.5rem;
     }
     
     .skill-logo i {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     
     .work-list {
@@ -1579,9 +1626,14 @@ nav .fa-solid {
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media only screen and (max-width: 768px) {
+/* iPad and Small Tablets */
+@media only screen and (max-width: 768px) and (min-width: 481px) {
     nav {
         justify-content: space-between;
     }
@@ -1600,11 +1652,11 @@ nav .fa-solid {
     }
 
     .typing-text {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .role {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .header-buttons {
@@ -1613,18 +1665,17 @@ nav .fa-solid {
         gap: 1rem;
     }
 
-    /* Mobile Skills Layout */
     .skills-logos {
-        gap: 1.5rem;
-        padding: 1rem 0;
+        gap: 2rem;
+        padding: 1.5rem 0;
     }
     
     .skill-logo i {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     
     .skill-name {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     nav .fa-solid {
@@ -1693,12 +1744,8 @@ nav .fa-solid {
         color: white;
     }
 
-    .theme-toggle {
-        margin-left: 0.5rem;
-    }
-
     .subtitle {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .row {
@@ -1712,61 +1759,57 @@ nav .fa-solid {
 
     .tab-titles {
         flex-wrap: wrap;
-        gap: 0.5rem;
+        gap: 0.8rem;
         justify-content: center;
     }
     
     .tab-links {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
         margin-right: 0.5rem;
         margin-bottom: 0.5rem;
     }
 
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .stat-number {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .work-list {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .portfolio-filter {
         flex-wrap: wrap;
-        gap: 0.5rem;
+        gap: 0.8rem;
     }
     
     .filter-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
     }
 
     .experience-header,
     .education-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem;
+        gap: 0.8rem;
     }
     
     .experience-timeline,
     .education-timeline {
-        padding-left: 1rem;
+        padding-left: 1.5rem;
     }
     
     .timeline-dot {
-        left: -1.8rem;
+        left: -2rem;
     }
 
-    .about-buttons {
-        flex-direction: column;
-    }
-    
     .services-list {
         grid-template-columns: 1fr;
     }
@@ -1776,30 +1819,161 @@ nav .fa-solid {
     }
 
     .back-to-top {
+        bottom: 25px;
+        right: 25px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .contact-left p {
+        font-size: 1.1rem;
+    }
+    
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 0 4%;
+    }
+    
+    .typing-text {
+        font-size: 2rem;
+    }
+    
+    .greeting {
+        font-size: 1rem;
+    }
+    
+    .role {
+        font-size: 1.1rem;
+    }
+    
+    .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .skills-logos {
+        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        padding: 1rem 0;
+    }
+    
+    .skill-logo i {
+        font-size: 2.5rem;
+    }
+    
+    .skill-name {
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+    }
+
+    .services-list div {
+        padding: 1.5rem;
+    }
+    
+    .services-list div i {
+        font-size: 2.5rem;
+    }
+    
+    .services-list div h2 {
+        font-size: 1.4rem;
+    }
+
+    .certification-list div {
+        padding: 1.5rem;
+        min-height: 280px;
+    }
+    
+    .certification-list div h2 {
+        font-size: 1.3rem;
+    }
+    
+    .tab-links {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .experience-timeline,
+    .education-timeline {
+        padding-left: 1rem;
+    }
+    
+    .timeline-item {
+        padding: 1.2rem;
+    }
+    
+    .timeline-dot {
+        left: -1.5rem;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .layer {
+        padding: 1.5rem;
+    }
+    
+    .layer h3 {
+        font-size: 1.3rem;
+    }
+    
+    .layer p {
+        font-size: 0.9rem;
+    }
+    
+    .project-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .filter-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .back-to-top {
         bottom: 20px;
         right: 20px;
         width: 45px;
         height: 45px;
     }
-    
-    .contact-left p {
-        font-size: 1rem;
-    }
-    
-    .social-icons a {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
 }
 
-@media only screen and (max-width: 480px) {
+/* Small Mobile Phones */
+@media only screen and (max-width: 360px) {
+    .container {
+        padding: 0 3%;
+    }
+    
     .typing-text {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .greeting {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .role {
@@ -1812,8 +1986,6 @@ nav .fa-solid {
     
     .skills-logos {
         gap: 1rem;
-        grid-template-columns: repeat(3, 1fr);
-        display: grid;
     }
     
     .skill-logo i {
@@ -1823,59 +1995,28 @@ nav .fa-solid {
     .skill-name {
         font-size: 0.8rem;
     }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .stat-number {
-        font-size: 1.5rem;
-    }
-    
-    .stat-label {
-        font-size: 0.9rem;
-    }
-
-    .services-list div {
-        padding: 1.5rem;
-    }
-    
-    .services-list div i {
-        font-size: 2rem;
-    }
-    
-    .services-list div h2 {
-        font-size: 1.3rem;
-    }
-
-    .certification-list div {
-        padding: 1.5rem;
-        min-height: 250px;
-    }
-    
-    .certification-list div h2 {
-        font-size: 1.2rem;
-    }
     
     .tab-links {
         padding: 0.25rem 0.5rem;
         font-size: 0.8rem;
     }
     
-    .experience-timeline,
-    .education-timeline {
-        padding-left: 0.5rem;
+    .filter-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .services-list div {
+        padding: 1rem;
+    }
+    
+    .certification-list div {
+        padding: 1rem;
+        min-height: 250px;
     }
     
     .timeline-item {
         padding: 1rem;
-    }
-    
-    .timeline-dot {
-        left: -1.3rem;
-        width: 8px;
-        height: 8px;
     }
     
     .layer {
@@ -1883,7 +2024,7 @@ nav .fa-solid {
     }
     
     .layer h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .layer p {
@@ -1897,7 +2038,7 @@ nav .fa-solid {
     
     .tech-tag {
         font-size: 0.7rem;
-        padding: 0.2rem 0.5rem;
+        padding: 0.2rem 0.4rem;
     }
 }
 
