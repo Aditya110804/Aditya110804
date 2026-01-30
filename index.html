@@ -524,11 +524,11 @@
                 </div>
 
                 <div class="contact-right">
-                   <form name="submit-to-google-sheet">
-                   <input type="text" name="name" placeholder="your name" required>
-                   <input type="email" name="email" placeholder="your email" required>
-                   <textarea name="message" rows="6" placeholder="your message"></textarea>
-                   <button type="submit" class="btn btn2">submit</button>
+                   <form name="submit-to-google-sheet" id="contact-form">
+                   <input type="text" name="name" placeholder="Your Name" required minlength="2">
+                   <input type="email" name="email" placeholder="Your Email" required>
+                   <textarea name="message" rows="6" placeholder="Your Message" required minlength="10"></textarea>
+                   <button type="submit" class="btn btn2">Send Message</button>
                 </form>
                 <span id="msg"></span>
 
@@ -613,30 +613,42 @@
     once: true
   });
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxS9gwWmQqxqKA6Ai1eyaTFx8Q5oVuygvtYDoHwwoq9j7P__ZM4MUBwKzitS58DcWJMZw/exec';
+  const scriptURL = 'https://formspree.io/f/xpznvlqr'; // Replace with your Formspree endpoint
   const form = document.forms['submit-to-google-sheet'];
   const msg = document.getElementById("msg");
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => {
+    
+    const formData = new FormData(form);
+    
+    fetch(scriptURL, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
         msg.innerHTML = "✔ Message sent successfully!";
         msg.className = "success-msg";
-        setTimeout(() => {
-          msg.innerHTML = "";
-          msg.className = "";
-        }, 5000);
         form.reset();
-      })
-      .catch(error => {
-        msg.innerHTML = "❌ Something went wrong!";
-        msg.className = "error-msg";
-        setTimeout(() => {
-          msg.innerHTML = "";
-          msg.className = "";
-        }, 5000);
-      });
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      msg.innerHTML = "❌ Something went wrong! Please try again.";
+      msg.className = "error-msg";
+    })
+    .finally(() => {
+      setTimeout(() => {
+        msg.innerHTML = "";
+        msg.className = "";
+      }, 5000);
+    });
   });
 </script>
 
