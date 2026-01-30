@@ -330,6 +330,79 @@ nav ul li a.active::after {
     z-index: 2001;
 }
 
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    nav ul {
+        display: none;
+    }
+    
+    nav ul.show {
+        display: flex;
+        background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        padding-top: 80px;
+        z-index: 2000;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+    }
+    
+    nav ul li {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 1rem 2rem;
+        color: var(--text-primary);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: var(--transition);
+        border-left: 4px solid transparent;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a.active {
+        background: var(--primary-color);
+        color: white;
+        border-left-color: white;
+        transform: translateX(10px);
+    }
+    
+    nav .fa-solid {
+        display: none;
+    }
+    
+    nav ul.show .fa-solid {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px;
+        border-radius: 50%;
+        color: var(--text-primary);
+        font-size: 1.2rem;
+    }
+    
+    nav ul.show .fa-solid:hover {
+        background: var(--primary-color);
+        color: white;
+    }
+}
+
 .hamburger span {
     width: 25px;
     height: 3px;
@@ -389,10 +462,12 @@ nav ul li a.active::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 2rem 0;
     position: relative;
     z-index: 10;
+    width: 100%;
 }
 
 .greeting {
@@ -414,6 +489,8 @@ nav ul li a.active::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 
 @keyframes blink {
@@ -1632,8 +1709,8 @@ nav .fa-solid {
     }
 }
 
-/* iPad and Small Tablets */
-@media only screen and (max-width: 768px) and (min-width: 481px) {
+/* Mobile and Tablet Navigation */
+@media only screen and (max-width: 768px) {
     nav {
         justify-content: space-between;
     }
@@ -1642,66 +1719,27 @@ nav .fa-solid {
         display: flex;
         margin-left: auto;
     }
-
-    .container {
-        padding: 0 3%;
-    }
-
-    #header {
-        background-attachment: scroll;
-    }
-
-    .typing-text {
-        font-size: 2.8rem;
-    }
-
-    .role {
-        font-size: 1.3rem;
-    }
-
-    .header-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .skills-logos {
-        gap: 2rem;
-        padding: 1.5rem 0;
-    }
     
-    .skill-logo i {
-        font-size: 3rem;
-    }
-    
-    .skill-name {
-        font-size: 1rem;
-    }
-
-    nav .fa-solid {
-        display: block;
-    }
-
     nav ul {
+        display: none;
+    }
+    
+    nav ul.show {
         background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
         position: fixed;
         top: 0;
-        right: -300px;
+        right: 0;
         width: 280px;
         height: 100vh;
         padding-top: 80px;
         z-index: 2000;
-        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         flex-direction: column;
         gap: 0;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
+        display: flex;
     }
-
-    nav ul.show {
-        right: 0;
-    }
-
+    
     nav ul li {
         margin: 0;
         padding: 0;
@@ -1726,8 +1764,9 @@ nav .fa-solid {
         border-left-color: white;
         transform: translateX(10px);
     }
-
-    nav ul .fa-solid {
+    
+    nav .fa-solid {
+        display: block;
         position: absolute;
         top: 25px;
         right: 25px;
@@ -1739,9 +1778,56 @@ nav .fa-solid {
         font-size: 1.2rem;
     }
     
-    nav ul .fa-solid:hover {
+    nav .fa-solid:hover {
         background: var(--primary-color);
         color: white;
+    }
+}
+
+/* iPad and Small Tablets */
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .container {
+        padding: 0 3%;
+    }
+
+    #header {
+        background-attachment: scroll;
+    }
+    
+    .header-text {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .typing-text {
+        font-size: 2.8rem;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+    }
+
+    .role {
+        font-size: 1.3rem;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .skills-logos {
+        gap: 2rem;
+        padding: 1.5rem 0;
+    }
+    
+    .skill-logo i {
+        font-size: 3rem;
+    }
+    
+    .skill-name {
+        font-size: 1rem;
     }
 
     .subtitle {
@@ -1842,8 +1928,19 @@ nav .fa-solid {
         padding: 0 4%;
     }
     
+    .header-text {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    
     .typing-text {
         font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+        align-self: center;
+        width: 100%;
     }
     
     .greeting {
@@ -1970,6 +2067,9 @@ nav .fa-solid {
     
     .typing-text {
         font-size: 1.6rem;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
     }
     
     .greeting {
