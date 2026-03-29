@@ -99,12 +99,15 @@ function closemenu() {
 // Theme Toggle
 function initializeThemeToggle() {
     const themeToggle = document.querySelector('.theme-toggle');
-    const themeIcon = themeToggle.querySelector('i');
     
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
+    // Always default to dark theme
+    localStorage.setItem('theme', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+    
+    if (themeToggle) {
+        updateThemeIcon('dark');
+        themeToggle.addEventListener('click', toggleTheme);
+    }
 }
 
 function toggleTheme() {
@@ -418,13 +421,13 @@ window.addEventListener('error', (e) => {
 // Service Worker Registration (for PWA)
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered: ', registration);
+        fetch('/sw.js', { method: 'HEAD' })
+            .then(res => {
+                if (res.ok) {
+                    return navigator.serviceWorker.register('/sw.js');
+                }
             })
-            .catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
+            .catch(() => {});
     });
 }
 

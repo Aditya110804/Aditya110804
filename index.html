@@ -543,25 +543,6 @@
 <!-- Script Section -->
 <script src="main.js"></script>
 <script>
-  // Typing Animation
-  document.addEventListener('DOMContentLoaded', function() {
-    const typingElement = document.querySelector('.typing-text');
-    const text = 'Aditya Sharma';
-    let index = 0;
-    
-    typingElement.textContent = '';
-    
-    function typeWriter() {
-      if (index < text.length) {
-        typingElement.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, 80);
-      }
-    }
-    
-    setTimeout(typeWriter, 1000);
-  });
-
   // Mobile Menu Toggle
   function togglemenu() {
     const sidemenu = document.getElementById('sidemenu');
@@ -613,29 +594,21 @@
     once: true
   });
 
-  const scriptURL = 'https://formspree.io/f/xpznvlqr'; // Replace with your Formspree endpoint
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwqLl8_Li744WiJbBcfvSneaBu1Bf5BIGYlu6Ak4eQMDbF4o1Mab3yBrLbcetASQfyhjQ/exec';
   const form = document.forms['submit-to-google-sheet'];
   const msg = document.getElementById("msg");
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    
-    const formData = new FormData(form);
-    
-    fetch(scriptURL, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => {
-      if (response.ok) {
+    fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form) })
+    .then(res => res.json())
+    .then(data => {
+      if (data.result === 'success') {
         msg.innerHTML = "✔ Message sent successfully!";
         msg.className = "success-msg";
         form.reset();
       } else {
-        throw new Error('Network response was not ok');
+        throw new Error(data.error || 'Submission failed');
       }
     })
     .catch(error => {
@@ -644,10 +617,7 @@
       msg.className = "error-msg";
     })
     .finally(() => {
-      setTimeout(() => {
-        msg.innerHTML = "";
-        msg.className = "";
-      }, 5000);
+      setTimeout(() => { msg.innerHTML = ""; msg.className = ""; }, 5000);
     });
   });
 </script>
